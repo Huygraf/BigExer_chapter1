@@ -187,12 +187,13 @@ def installing_data():
     merged_df = merged_df.sort_values(by = ['player'])
     merged_df.rename(columns=target_name_dict, inplace=True)
     #Save merged DataFrame to CSV
-    merged_df.to_csv('results.csv', index=False)
+    output_dir = 'SourceCode'   
+    merged_df.to_csv(os.path.join(output_dir,'results.csv'), index=False)
 
 
 # Section II
 def find_top_3_greatest_and_lowest():
-    merged_df = pd.read_csv('results.csv')
+    merged_df = pd.read_csv(result_path)
 #merged_df.set_index('Player')
     target_name = merged_df.columns.tolist()
 
@@ -232,11 +233,11 @@ def find_top_3_greatest_and_lowest():
         )
         str_temp = "---------------------\n".join(results)
         print(str_temp)
-        with open('top_3.txt', 'w', encoding = 'utf-8') as f:
+        with open(os.path.join('SourceCode','top_3.txt'), 'w', encoding = 'utf-8') as f:
             f.write(str_temp)
           
 def find_median_and_mean_and_std():
-    merged_df = pd.read_csv('results.csv')
+    merged_df = pd.read_csv(result_path)
     #merged_df.set_index('Player')
     target_name = merged_df.columns.tolist()
     stat_columns = merged_df.columns[4:]
@@ -295,11 +296,11 @@ def find_median_and_mean_and_std():
     results_df = pd.DataFrame(rows, index=index_names)
 
     # Save to results2.csv
-    results_df.to_csv('results2.csv', index = index_names)
+    results_df.to_csv(os.path.join('SourceCode','results2.csv'), index = index_names)
 
 def plot_histogram():
 
-    merged_df = pd.read_csv('results.csv')
+    merged_df = pd.read_csv(result_path)
     #merged_df.set_index('Player')
     target_name = merged_df.columns.tolist()
 
@@ -318,10 +319,10 @@ def plot_histogram():
     for col in stat_columns:
         merged_df[col] = pd.to_numeric(merged_df[col], errors='coerce').fillna(0)
 
-    output_dir = 'Histogram'
+    output_dir = 'SourceCode\Histogram'
 
     if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+        os.makedirs(os.path.join('SourceCode', output_dir))
     all_dir = 'All'
     if not os.path.exists(all_dir):
         os.makedirs(os.path.join(output_dir, all_dir))
@@ -331,7 +332,7 @@ def plot_histogram():
         os.makedirs(os.path.join(output_dir, team_dir))
 
     teams = merged_df['Team'].unique()
-
+    #Import histogram of all teams
     for col in stat_columns:
         plt.figure(figsize = (12, 10))
 
@@ -347,7 +348,7 @@ def plot_histogram():
 
         plt.savefig(os.path.join(output_dir, 'All', f'{col}_all_players.png'))
         plt.close()
-
+    #Import histogram for each team
     for team in teams:
         temp_dir = os.path.join(output_dir, team_dir, team)
         if not os.path.exists(temp_dir):
@@ -372,7 +373,7 @@ def plot_histogram():
             plt.close()
 
 def best_team():
-    df = pd.read_csv('results2.csv', header = 0)
+    df = pd.read_csv(result_path, header = 0)
 
     #Requirements:
         #Identify the team with the highest score for each statistic
@@ -444,8 +445,10 @@ def best_team():
         print(f'{team}: {count}')
 
     best_team = max(top_sort, key=top_sort.get)
+
     # Save the result of highest mean, median and std team to a text file
-    with open('Best statistics.txt', 'w') as file:
+
+    with open(os.path.join('SourceCode', 'Best statistics.txt'), 'w') as file:
         file.write('Best mean:\n')
         for stat, (team, value) in highest_mean.items():
             file.write(f'{stat}: {team} ({value})\n')
@@ -462,7 +465,7 @@ def best_team():
     print({best_team})
 # Section III
 def K_means():
-    df = pd.read_csv('results.csv')
+    df = pd.read_csv(result_path)
 
     # Keep the original dataframe for reference
     df_original = df.copy()
@@ -545,7 +548,7 @@ def K_means():
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.legend(title='Cluster Type')
-    plt.savefig('section_3_kmeans.png')
+    plt.savefig(os.path.join('SourceCode', 'section_3_kmeans.png'))
     plt.close()
 
     # Print cluster labels for reference
@@ -657,9 +660,9 @@ def estimating_transfer_value():
     new_df = pd.concat([new_df, df['team_name']], axis = 1, ignore_index= False)
     new_df = pd.concat([new_df, df['estimated_value']], axis = 1, ignore_index = False)
 
-    new_df.to_csv('transfer_table.csv', index = False)
-    value_table = pd.read_csv('transfer_table.csv')
-    results_df = pd.read_csv('results.csv')
+    new_df.to_csv(os.path.join('SourceCode','transfer_table.csv'), index = False)
+    value_table = pd.read_csv('SourceCode/transfer_table.csv')
+    results_df = pd.read_csv('SourceCode/results.csv')
     filltered_results = results_df.copy()
 
     preprocessing(results_df, value_table)
@@ -705,14 +708,20 @@ def estimating_transfer_value():
     plt.xlabel('Importances')
     plt.ylabel('Feature')
     plt.title('Value Estimating Main Standard')
-    plt.savefig('Value_estimating.png')
+    plt.savefig(os.path.join('SourceCode', 'Value_estimating.png'))
     plt.show()
+#Create SourceCode path
+
+output_dir = 'SourceCode'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+result_path = 'SourceCode/results.csv'
 
 #installing_data()
 
 #find_top_3_greatest_and_lowest()
 
-#find_median_and_mean_and_std()
+find_median_and_mean_and_std()
 
 #plot_histogram()
 

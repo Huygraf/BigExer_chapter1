@@ -1,6 +1,6 @@
 player_name,team_name,estimated_value
 Erling Haaland,Manchester City,€198.8M
-Martin Ødegaard,Arsenal FC,€126.5M
+Martin Ødegaard ,Arsenal FC,€126.5M
 Alexander Isak,Newcastle United,€120.3M
 Cole Palmer,Chelsea,€115.4M
 Declan Rice,Arsenal FC,€107.8M
@@ -14,7 +14,7 @@ Moisés Caicedo,Chelsea,€80.7M
 William Saliba,Arsenal FC,€79.5M
 Omar Marmoush,Manchester City,€79.1M
 Joško Gvardiol,Manchester City,€78.7M
-Gabriel Magalhães,Arsenal FC,€75.5M
+Gabriel Magalhães ,Arsenal FC,€75.5M
 Sávio,Manchester City,€74.8M
 Ethan Nwaneri,Arsenal FC,€74.3M
 Enzo Fernández,Chelsea,€73.7M
@@ -23,7 +23,7 @@ Brennan Johnson,Tottenham,€71.3M
 Lucas Paquetá,West Ham United,€71.2M
 Leny Yoro,Manchester United,€71M
 Luis Díaz,Liverpool FC,€71M
-Kai Havertz,Arsenal FC,€70.5M
+Kai Havertz ,Arsenal FC,€70.5M
 Morgan Rogers,Aston Villa,€69M
 Murillo,Nottingham Forest,€68.4M
 Cody Gakpo,Liverpool FC,€67.5M
@@ -40,7 +40,7 @@ Micky van de Ven,Tottenham,€61.8M
 Mohammed Kudus,West Ham United,€61.7M
 Morgan Gibbs-White,Nottingham Forest,€61.7M
 Curtis Jones,Liverpool FC,€61.7M
-Milos Kerkez,Bournemouth,€61.5M
+Miloš Kerkez,Bournemouth,€61.5M
 Ollie Watkins,Aston Villa,€61.4M
 João Pedro,Brighton & Hove Albion,€61.3M
 Darwin Núñez,Liverpool FC,€60.9M
@@ -63,7 +63,7 @@ Mathys Tel,Tottenham,€56.4M
 Pedro Porro,Tottenham,€55.9M
 Trent Alexander-Arnold,Liverpool FC,€55.8M
 Dean Huijsen,Bournemouth,€55M
-Rasmus Højlund,Manchester United,€54.9M
+Rasmus Winther Højlund,Manchester United,€54.9M
 Bruno Fernandes,Manchester United,€54.8M
 Roméo Lavia,Chelsea,€54.6M
 Marc Guéhi,Crystal Palace,€54.2M
@@ -81,7 +81,7 @@ Kaoru Mitoma,Brighton & Hove Albion,€50.6M
 Bernardo Silva,Manchester City,€50M
 Anthony Gordon,Newcastle United,€49.5M
 Valentino Livramento,Newcastle United,€49.3M
-Riccardo Calafiori,Arsenal FC,€49.3M
+Riccardo Calafiori ,Arsenal FC,€49.3M
 Lisandro Martínez,Manchester United,€49.2M
 Adam Wharton,Crystal Palace,€48.9M
 Evan Ferguson,West Ham United,€48.5M
@@ -96,10 +96,10 @@ Elliot Anderson,Nottingham Forest,€46.5M
 Antonee Robinson,Fulham FC,€46.4M
 Boubacar Kamara,Aston Villa,€46.3M
 Jacob Ramsey,Aston Villa,€45.8M
-Gabriel Jesus,Arsenal FC,€45.6M
+Gabriel Jesus ,Arsenal FC,€45.6M
 Anthony Elanga,Nottingham Forest,€45.5M
 Pau Torres,Aston Villa,€45.3M
-Rayan Aït-Nouri,Wolves,€45M
+Rayan Aït Nouri,Wolves,€45M
 Justin Kluivert,Bournemouth,€44.8M
 Joshua Zirkzee,Manchester United,€43.7M
 Jack Grealish,Manchester City,€43.5M
@@ -158,7 +158,7 @@ Yoane Wissa,Brentford FC,€31.4M
 Daniel Muñoz,Crystal Palace,€30.9M
 Jørgen Strand Larsen,Wolves,€30.8M
 Facundo Buonanotte,Leicester City,€30.7M
-Heung-min Son,Tottenham,€30.7M
+Heung-min Son ,Tottenham,€30.7M
 Bart Verbruggen,Brighton & Hove Albion,€30.7M
 Wesley Fofana,Chelsea,€30.3M
 Alex Iwobi,Fulham FC,€30.3M
@@ -183,7 +183,7 @@ Sander Berge,Fulham FC,€27.8M
 Maxence Lacroix,Crystal Palace,€27.7M
 Alex Scott,Bournemouth,€27.6M
 Axel Disasi,Aston Villa,€27.5M
-Omari Hutchinson,Ipswich Town,€27.4M
+O. Hutchinson,Ipswich Town,€27.4M
 Kevin Danso,Tottenham,€27.2M
 Keane Lewis-Potter,Brentford FC,€27.1M
 Vitaly Janelt,Brentford FC,€27.1M
@@ -213,7 +213,7 @@ Aaron Hickey,Brentford FC,€24.9M
 Robert Sánchez,Chelsea,€24.9M
 Kiernan Dewsbury-Hall,Chelsea,€24.9M
 Julio Enciso,Ipswich Town,€24.9M
-Eddie Nketiah,Crystal Palace,€24.8M
+Edward Nketiah,Crystal Palace,€24.8M
 Tyrick Mitchell,Crystal Palace,€24.6M
 Claudio Echeverri,Manchester City,€24.4M
 Jesper Lindstrøm,Everton FC,€24.4M
@@ -232,7 +232,7 @@ Carlos Soler,West Ham United,€23.4M
 Neco Williams,Nottingham Forest,€23.4M
 Tomáš Souček,West Ham United,€23.2M
 James Garner,Everton FC,€23.2M
-Takehiro Tomiyasu,Arsenal FC,€22.9M
+Takehiro Tomiyasu ,Arsenal FC,€22.9M
 Dean Henderson,Crystal Palace,€22.7M
 Jordan Pickford,Everton FC,€22.6M
 Mateus Fernandes,Southampton,€22.5M
@@ -247,8 +247,8 @@ Reiss Nelson,Fulham FC,€21.3M
 Jean-Ricner Bellegarde,Wolves,€21.3M
 Sean Longstaff,Newcastle United,€21.3M
 Federico Chiesa,Liverpool FC,€21.2M
-Caoimhín Kelleher,Liverpool FC,€20.9M
-Fábio Carvalho,Brentford FC,€20.6M
+Caoimhin Kelleher,Liverpool FC,€20.9M
+Fabio Carvalho,Brentford FC,€20.6M
 Marcos Senesi,Bournemouth,€20.4M
 Ben Chilwell,Crystal Palace,€20.4M
 Wilfred Ndidi,Leicester City,€20.3M
@@ -315,7 +315,7 @@ Luis Sinisterra,Bournemouth,€15.4M
 Boubakary Soumaré,Leicester City,€15.4M
 Armel Bella-Kotchap,Southampton,€15.4M
 Mathis Amougou,Chelsea,€15.3M
-Thomas Partey,Arsenal FC,€15.2M
+Thomas Partey ,Arsenal FC,€15.2M
 Nasser Djiga,Wolves,€14.7M
 Rico Henry,Brentford FC,€14.7M
 Mathias Jensen,Brentford FC,€14.7M
